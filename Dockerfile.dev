@@ -1,6 +1,6 @@
 #ARG BASE_IMAGE=ubuntu:18.04
-ARG BASE_IMAGE=pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
-#ARG BASE_IMAGE=fudannlp/fudannlp:pytorch1.9.0-cuda11.1-cudnn8-runtime-sshd-ceph
+#ARG BASE_IMAGE=pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
+ARG BASE_IMAGE=fudannlp/fudannlp:pytorch1.9.0-cuda11.1-cudnn8-runtime-sshd-ceph
 
 FROM ${BASE_IMAGE}
 
@@ -30,10 +30,5 @@ COPY . /app/
 
 EXPOSE 9090
 
-ENV MODEL_DIR=/maas_storage
-ENV RQ_QUEUE_NAME=default
-ENV REDIS_HOST=redis
-ENV REDIS_PORT=6379
-ENV USE_REDIS=1
-
-CMD ["/opt/conda/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+#CMD ["/opt/conda/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["/opt/conda/bin/label-studio-ml", "start", "/app" ]
