@@ -1,0 +1,33 @@
+# 模型基础信息
+# name: 模型名称
+# type: 模型的类型，取值范围: EntityRelationExtraction | EventExtraction
+# version: 模型的版本，与Docker镜像tag保持一致
+# home: 项目根目录，默认为/app
+
+name: "实体关系抽取 - BERT + CRF"
+type: "EntityRelationExtraction"
+version: "1.0.0"
+
+hypers:
+  # 模型超参
+  # name: 超参名称，命名规范参考：TODO:文档链接
+  # type: 超参类型，支持4种类型：float, int, string, file。
+  #       其中file类型通过【文件管理】功能上传，并在训练模型时指定，也可以指定镜像中自带的文件路径。
+  # default_value: 默认值
+  # optional: 是否可选
+  - name: "learning_rate"
+    type: float
+    default_value: 0.01
+    optional: true
+  - name: "batch_size"
+    type: int
+    default_value: 8
+    optional: true
+  - name: "num_epoch"
+    type: int
+    default_value: 10
+    optional: true
+  - name: "pretrained"
+    type: str
+    default_value: "dbmdz/bert-large-cased-finetuned-conll03-english"
+    optional: true
