@@ -24,7 +24,7 @@ RUN pip3 install --no-cache \
                  -r requirements.txt
 
 
-COPY uwsgi.ini /etc/uwsgi/
+COPY uwsgi.ini.plugin-mode /etc/uwsgi/
 COPY supervisord.conf /etc/supervisor/conf.d/
 
 COPY . /app/
