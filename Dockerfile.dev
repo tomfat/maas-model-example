@@ -10,11 +10,14 @@ COPY requirements.txt .
 RUN conda install -y icu=58
 RUN conda install -y -c conda-forge python=3.7.0 uwsgi
 
-RUN pip install \
-                -r requirements.txt \
-                supervisor==4.2.2 \
-                click==7.1.2 \
-                label-studio-ml==1.0.3
+RUN pip install --no-cache --ignore-installed \
+                 -U pip setuptools
+
+RUN pip install --no-cache --ignore-installed \
+                 supervisor==4.2.2 \
+                 click==7.1.2 \
+                 label-studio-ml==1.0.3 \
+                 -r requirements.txt
 
 COPY uwsgi.ini /etc/uwsgi/
 COPY supervisord.conf /etc/supervisor/conf.d/
@@ -27,6 +30,5 @@ EXPOSE 9090
 
 ENV MODEL_DIR=/maas_storage/model
 
-# 为了调试方便，把CMD改成一条dummy的命令
-CMD ["sleep", "infinity"]
+# 基础镜像中的CMD是启动sshd服务，这里将CMD注释掉以符合大家平时的使用习惯
 #CMD ["/opt/conda/bin/label-studio-ml", "start", "/app" ]
