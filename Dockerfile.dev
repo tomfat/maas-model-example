@@ -7,7 +7,7 @@ WORKDIR /tmp
 COPY requirements.txt .
 
 # BASE_IMAGE通过conda安装的python, 这里同样使用conda安装uwsgi，否则python lib的版本不匹配
-RUN conda install -y -c conda-forge uwsgi
+RUN conda install -y -c conda-forge python=3.7.0 uwsgi
 
 RUN pip install \
                 -r requirements.txt \
