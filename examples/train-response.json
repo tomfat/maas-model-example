@@ -1,0 +1,152 @@
+{
+	"annotations": [
+      {
+			"id": 3,
+			"annotations": [{
+				"id": 7,
+				"completed_by": 1,
+				"result": [{
+						"value": {
+							"start": 8,
+							"end": 20,
+							"text": "Label Studio",
+							"labels": [
+								"Organization"
+							]
+						},
+						"id": "t7RbG-UDkZ",
+						"from_name": "label",
+						"to_name": "text",
+						"type": "labels",
+						"origin": "manual"
+					},
+					{
+						"value": {
+							"start": 48,
+							"end": 53,
+							"text": "cloud",
+							"labels": [
+								"Person"
+							]
+						},
+						"id": "afHEwE3Cp7",
+						"from_name": "label",
+						"to_name": "text",
+						"type": "labels",
+						"origin": "manual"
+					},
+					{
+						"from_id": "t7RbG-UDkZ",
+						"to_id": "afHEwE3Cp7",
+						"type": "relation",
+						"direction": "right",
+						"labels": [
+							"org:founded_by"
+						]
+					}
+				],
+				"was_cancelled": false,
+				"ground_truth": false,
+				"created_at": "2021-12-03T05:23:45.618458Z",
+				"updated_at": "2021-12-03T05:23:45.618491Z",
+				"lead_time": 23.416,
+				"prediction": {},
+				"result_count": 0,
+				"task": 3,
+				"parent_prediction": null,
+				"parent_annotation": null
+			}],
+			"file_upload": "1453bc3a-text.txt",
+			"drafts": [
+				2
+			],
+			"predictions": [
+				5
+			],
+			"data": {
+				"text": "Install Label Studio locally, or deploy it in a cloud instance. Also you can try Label Studio Teams."
+			},
+			"meta": {},
+			"created_at": "2021-12-03T05:21:10.181320Z",
+			"updated_at": "2021-12-03T05:21:10.181355Z",
+			"project": 2
+		},
+      {
+			"id": 4,
+			"annotations": [{
+				"id": 8,
+				"completed_by": 1,
+				"result": [{
+						"value": {
+							"start": 65,
+							"end": 74,
+							"text": "arguments",
+							"labels": [
+								"Organization"
+							]
+						},
+						"id": "gQkhmJ6H9W",
+						"from_name": "label",
+						"to_name": "text",
+						"type": "labels",
+						"origin": "manual"
+					},
+					{
+						"value": {
+							"start": 0,
+							"end": 3,
+							"text": "You",
+							"labels": [
+								"Person"
+							]
+						},
+						"id": "2iMgUnRpEb",
+						"from_name": "label",
+						"to_name": "text",
+						"type": "labels",
+						"origin": "manual"
+					},
+					{
+						"from_id": "gQkhmJ6H9W",
+						"to_id": "2iMgUnRpEb",
+						"type": "relation",
+						"direction": "right",
+						"labels": [
+							"org:founded"
+						]
+					}
+				],
+				"was_cancelled": false,
+				"ground_truth": false,
+				"created_at": "2021-12-03T05:24:44.638325Z",
+				"updated_at": "2021-12-03T05:25:06.156753Z",
+				"lead_time": 40.244,
+				"prediction": {},
+				"result_count": 0,
+				"task": 4,
+				"parent_prediction": null,
+				"parent_annotation": null
+			}],
+			"file_upload": "1453bc3a-text.txt",
+			"drafts": [
+				5
+			],
+			"predictions": [
+				6
+			],
+			"data": {
+				"text": "You can override the default launch command by appending the new arguments:"
+			},
+			"meta": {},
+			"created_at": "2021-12-03T05:21:10.181418Z",
+			"updated_at": "2021-12-03T05:25:05.898409Z",
+			"project": 2
+		}
+	],
+	"project": "2.1638508839",
+	"label_config": "<View> <Relations> <Relation value=\"org:founded_by\"/> <Relation value=\"org:founded\"/> </Relations> <Labels name=\"label\" toName=\"text\"> <Label value=\"Organization\" background=\"orange\"/> <Label value=\"Person\" background=\"green\"/> <Label value=\"Datetime\" background=\"blue\"/> </Labels>\n<Text name=\"text\" value=\"$text\"/> </View>\n<!-- {\"data\": { \"text\": \"Microsoft was founded by Bill Gates and Paul Allen on April 4, 1975, to develop and sell BASIC interpreters for the Altair 8800.\" }, \"annotations\": [{\"result\": [ { \"value\": { \"start\": 0, \"end\": 9, \"text\": \"Microsoft\", \"labels\": [ \"Organization\" ] }, \"id\": \"a-ubmF-dP2\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 25, \"end\": 35, \"text\": \"Bill Gates\", \"labels\": [ \"Person\" ] }, \"id\": \"dQ_pmsrWsm\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 40, \"end\": 50, \"text\": \"Paul Allen\", \"labels\": [ \"Person\" ] }, \"id\": \"IpmpOMj0vw\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 54, \"end\": 67, \"text\": \"April 4, 1975\", \"labels\": [ \"Datetime\" ] }, \"id\": \"Q-zXcdacte\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"dQ_pmsrWsm\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [ \"org:founded_by\" ] }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"IpmpOMj0vw\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [] }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"Q-zXcdacte\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [ \"org:founded\" ] } ] }]\n} -->",
+	"params": {
+		"login": null,
+		"password": null
+	}
+}

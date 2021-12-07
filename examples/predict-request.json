@@ -1,0 +1,204 @@
+{
+  "tasks": [
+    {
+      "id": 3,
+      "data": {
+        "text": "Install Label Studio locally, or deploy it in a cloud instance. Also you can try Label Studio Teams."
+      },
+      "meta": {},
+      "created_at": "2021-12-03T05:21:10.181320Z",
+      "updated_at": "2021-12-03T05:21:10.181355Z",
+      "is_labeled": true,
+      "overlap": 1,
+      "project": 2,
+      "file_upload": 2,
+      "annotations": [
+{
+          "id": 7,
+          "created_username": " yue@fd.com, 1",
+          "created_ago": "3\u00a0days, 3\u00a0hours",
+          "result": [
+            {
+              "value": {
+                "start": 8,
+                "end": 20,
+                "text": "Label Studio",
+                "labels": [
+                  "Organization"
+                ]
+              },
+              "id": "t7RbG-UDkZ",
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "origin": "manual"
+            },
+            {
+              "value": {
+                "start": 48,
+                "end": 53,
+                "text": "cloud",
+                "labels": [
+                  "Person"
+                ]
+              },
+              "id": "afHEwE3Cp7",
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "origin": "manual"
+            },
+            {
+              "from_id": "t7RbG-UDkZ",
+              "to_id": "afHEwE3Cp7",
+              "type": "relation",
+              "direction": "right",
+              "labels": [
+                "org:founded_by"
+              ]
+            }
+          ],
+          "was_cancelled": false,
+          "ground_truth": false,
+          "created_at": "2021-12-03T05:23:45.618458Z",
+          "updated_at": "2021-12-03T05:23:45.618491Z",
+          "lead_time": 23.416,
+          "task": 3,
+          "completed_by": 1,
+          "parent_prediction": null,
+          "parent_annotation": null
+}
+      ],
+      "predictions": [
+{
+          "id": 5,
+          "model_version": "1638778457",
+          "created_ago": "13\u00a0minutes",
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "choices",
+              "value": {
+                "choices": [
+                  "Person"
+                ]
+              }
+            }
+          ],
+          "score": 0.8088202035172423,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2021-12-06T08:20:13.928231Z",
+          "updated_at": "2021-12-06T08:20:13.928300Z",
+          "task": 3
+}
+      ]
+    },
+    {
+      "id": 4,
+      "data": {
+        "text": "You can override the default launch command by appending the new arguments:"
+      },
+      "meta": {},
+      "created_at": "2021-12-03T05:21:10.181418Z",
+      "updated_at": "2021-12-03T05:25:05.898409Z",
+      "is_labeled": true,
+      "overlap": 1,
+      "project": 2,
+      "file_upload": 2,
+      "annotations": [
+{
+          "id": 8,
+          "created_username": " yue@fd.com, 1",
+          "created_ago": "3\u00a0days, 3\u00a0hours",
+          "result": [
+            {
+              "value": {
+                "start": 65,
+                "end": 74,
+                "text": "arguments",
+                "labels": [
+                  "Organization"
+                ]
+              },
+              "id": "gQkhmJ6H9W",
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "origin": "manual"
+            },
+            {
+              "value": {
+                "start": 0,
+                "end": 3,
+                "text": "You",
+                "labels": [
+                  "Person"
+                ]
+              },
+              "id": "2iMgUnRpEb",
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "origin": "manual"
+            },
+            {
+              "from_id": "gQkhmJ6H9W",
+              "to_id": "2iMgUnRpEb",
+              "type": "relation",
+              "direction": "right",
+              "labels": [
+                "org:founded"
+              ]
+            }
+          ],
+          "was_cancelled": false,
+          "ground_truth": false,
+          "created_at": "2021-12-03T05:24:44.638325Z",
+          "updated_at": "2021-12-03T05:25:06.156753Z",
+          "lead_time": 40.244,
+          "task": 4,
+          "completed_by": 1,
+          "parent_prediction": null,
+          "parent_annotation": null
+}
+      ],
+      "predictions": [
+{
+          "id": 6,
+          "model_version": "1638778457",
+          "created_ago": "13\u00a0minutes",
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "choices",
+              "value": {
+                "choices": [
+                  "Datetime"
+                ]
+              }
+            }
+          ],
+          "score": 0.41727805301947685,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2021-12-06T08:20:14.030788Z",
+          "updated_at": "2021-12-06T08:20:14.030822Z",
+          "task": 4
+}
+      ]
+    }
+  ],
+  "model_version": "1638508922",
+  "project": "2.1638508839",
+  "label_config": "<View> <Relations> <Relation value=\"org:founded_by\"/> <Relation value=\"org:founded\"/> </Relations> <Labels name=\"label\" toName=\"text\"> <Label value=\"Organization\" background=\"orange\"/> <Label value=\"Person\" background=\"green\"/> <Label value=\"Datetime\" background=\"blue\"/> </Labels>\n<Text name=\"text\" value=\"$text\"/> </View>\n<!-- {\"data\": { \"text\": \"Microsoft was founded by Bill Gates and Paul Allen on April 4, 1975, to develop and sell BASIC interpreters for the Altair 8800.\" }, \"annotations\": [{\"result\": [ { \"value\": { \"start\": 0, \"end\": 9, \"text\": \"Microsoft\", \"labels\": [ \"Organization\" ] }, \"id\": \"a-ubmF-dP2\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 25, \"end\": 35, \"text\": \"Bill Gates\", \"labels\": [ \"Person\" ] }, \"id\": \"dQ_pmsrWsm\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 40, \"end\": 50, \"text\": \"Paul Allen\", \"labels\": [ \"Person\" ] }, \"id\": \"IpmpOMj0vw\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 54, \"end\": 67, \"text\": \"April 4, 1975\", \"labels\": [ \"Datetime\" ] }, \"id\": \"Q-zXcdacte\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"dQ_pmsrWsm\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [ \"org:founded_by\" ] }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"IpmpOMj0vw\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [] }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"Q-zXcdacte\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [ \"org:founded\" ] } ] }]\n} -->",
+  "params": {
+    "login": null,
+    "password": null,
+    "context": null
+  }
+}

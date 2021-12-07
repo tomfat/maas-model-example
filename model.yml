@@ -2,7 +2,6 @@
 # name: 模型名称
 # type: 模型的类型，取值范围: EntityRelationExtraction | EventExtraction
 # version: 模型的版本，与Docker镜像tag保持一致
-# home: 项目根目录，默认为/app
 
 name: "实体关系抽取 - BERT + CRF"
 type: "EntityRelationExtraction"

@@ -1,22 +1,18 @@
-#ARG BASE_IMAGE=ubuntu:18.04
-#ARG BASE_IMAGE=pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
 ARG BASE_IMAGE=fudannlp/fudannlp:pytorch1.9.0-cuda11.1-cudnn8-runtime-sshd-ceph
 
 FROM ${BASE_IMAGE}
 
 WORKDIR /tmp
 
-COPY ./cndocker/ubuntu18.04-sources.list /etc/apt/sources.list
-COPY ./cndocker/pip.conf /root/.pip/pip.conf
 COPY requirements.txt .
 
-RUN apt update ;\
-    apt install -y uwsgi ;\
-    apt autoremove; \
-    apt clean
+# BASE_IMAGE通过conda安装的python, 这里同样使用conda安装uwsgi，否则python lib的版本不匹配
+# RUN conda install -y -c conda-forge uwsgi
 
-RUN pip install --no-cache \
-                -r requirements.txt \
+RUN conda install \
+                --file requirements.txt
+
+RUN conda install \
                 supervisor==4.2.2 \
                 click==7.1.2 \
                 label-studio-ml==1.0.3
@@ -26,9 +22,12 @@ COPY supervisord.conf /etc/supervisor/conf.d/
 
 WORKDIR /app
 
-COPY . /app/
+COPY . /app
 
 EXPOSE 9090
 
-#CMD ["/opt/conda/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
-CMD ["/opt/conda/bin/label-studio-ml", "start", "/app" ]
+ENV MODEL_DIR=/maas_storage/model
+
+# 为了调试方便，把CMD改成一条dummy的命令
+CMD ["sleep", "infinity"]
+#CMD ["/opt/conda/bin/label-studio-ml", "start", "/app" ]
