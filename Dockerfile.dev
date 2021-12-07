@@ -7,12 +7,10 @@ WORKDIR /tmp
 COPY requirements.txt .
 
 # BASE_IMAGE通过conda安装的python, 这里同样使用conda安装uwsgi，否则python lib的版本不匹配
-# RUN conda install -y -c conda-forge uwsgi
+RUN conda install -y -c conda-forge uwsgi
 
-RUN conda install \
-                --file requirements.txt
-
-RUN conda install \
+RUN pip install \
+                -r requirements.txt \
                 supervisor==4.2.2 \
                 click==7.1.2 \
                 label-studio-ml==1.0.3
