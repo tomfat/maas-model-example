@@ -15,7 +15,7 @@
 							]
 						},
 						"id": "t7RbG-UDkZ",
-						"from_name": "label",
+						"from_name": "entity",
 						"to_name": "text",
 						"type": "labels",
 						"origin": "manual"
@@ -30,7 +30,7 @@
 							]
 						},
 						"id": "afHEwE3Cp7",
-						"from_name": "label",
+						"from_name": "entity",
 						"to_name": "text",
 						"type": "labels",
 						"origin": "manual"
@@ -143,10 +143,9 @@
 			"project": 2
 		}
 	],
-	"project": "2.1638508839",
+	"project": "0",
 	"label_config": "<View> <Relations> <Relation value=\"org:founded_by\"/> <Relation value=\"org:founded\"/> </Relations> <Labels name=\"label\" toName=\"text\"> <Label value=\"Organization\" background=\"orange\"/> <Label value=\"Person\" background=\"green\"/> <Label value=\"Datetime\" background=\"blue\"/> </Labels>\n<Text name=\"text\" value=\"$text\"/> </View>\n<!-- {\"data\": { \"text\": \"Microsoft was founded by Bill Gates and Paul Allen on April 4, 1975, to develop and sell BASIC interpreters for the Altair 8800.\" }, \"annotations\": [{\"result\": [ { \"value\": { \"start\": 0, \"end\": 9, \"text\": \"Microsoft\", \"labels\": [ \"Organization\" ] }, \"id\": \"a-ubmF-dP2\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 25, \"end\": 35, \"text\": \"Bill Gates\", \"labels\": [ \"Person\" ] }, \"id\": \"dQ_pmsrWsm\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 40, \"end\": 50, \"text\": \"Paul Allen\", \"labels\": [ \"Person\" ] }, \"id\": \"IpmpOMj0vw\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"value\": { \"start\": 54, \"end\": 67, \"text\": \"April 4, 1975\", \"labels\": [ \"Datetime\" ] }, \"id\": \"Q-zXcdacte\", \"from_name\": \"label\", \"to_name\": \"text\", \"type\": \"labels\" }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"dQ_pmsrWsm\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [ \"org:founded_by\" ] }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"IpmpOMj0vw\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [] }, { \"from_id\": \"a-ubmF-dP2\", \"to_id\": \"Q-zXcdacte\", \"type\": \"relation\", \"direction\": \"right\", \"labels\": [ \"org:founded\" ] } ] }]\n} -->",
 	"params": {
-		"login": null,
-		"password": null
+
 	}
 }

@@ -17,11 +17,11 @@ class ModelEntry(LabelStudioMLBase):
         XML example
         ```
         <View>
-          <Relations name="rel_label" toName="text">
+          <Relations name="relation" toName="text">
             <Relation value="org:founded_by"/>
             <Relation value="org:founded"/>
           </Relations>
-          <Labels name="label" toName="text">
+          <Labels name="entity" toName="text">
             <Label value="Organization" background="orange"/>
             <Label value="Person" background="green"/>
             <Label value="Datetime" background="blue"/>
