@@ -1,3 +1,4 @@
 .idea
 *.pyc
 maas-model-example.tar
+app/glove*

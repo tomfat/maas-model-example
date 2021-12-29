@@ -29,6 +29,7 @@ logging.config.dictConfig({
 
 from label_studio_ml.api import init_app
 from model_entry import ModelEntry
+from bilstm_crf import BiLSTMCRF
 
 
 _DEFAULT_CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config.json')
