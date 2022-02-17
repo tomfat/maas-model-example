@@ -54,6 +54,7 @@ class ModelTest(unittest.TestCase):
 
 		# Test training
 		self.train_output = model.fit(input_data, workdir=workdir)
+		print(json.dumps(self.train_output, indent=2))
 
 		saved_files = []
 		for file_name in os.listdir(workdir):
@@ -85,6 +86,10 @@ class ModelTest(unittest.TestCase):
 		# Test prediction
 		predictions = model.predict(input_data)
 		self.assertIsNotNone(predictions)
+		self.assertIn('result', predictions[0])
+		self.assertIn('al_score', predictions[0])
+		self.assertTrue(predictions[0]['al_score'] >= 0)
+		self.assertTrue(predictions[0]['al_score'] <= 1)
 
 	def _get_training_input(self):
 		input_data = json.loads(ENTITY_RELATION_ANNO)

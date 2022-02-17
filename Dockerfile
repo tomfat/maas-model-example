@@ -52,7 +52,7 @@ ENV MODEL_DIR=/var/maas-storage
 ENV REDIS_HOST=localhost
 ENV REDIS_PORT=6379
 ENV RQ_QUEUE_NAME=default
-ENV PYTHONPATH=/app:/app/tacred-relation
+ENV PYTHONPATH=/app
 
 EXPOSE 9090
 

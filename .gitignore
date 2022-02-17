@@ -1,4 +1,7 @@
+app/glove.6B.100d*
+app/chinese_50b*
+test/chinese_50b*
+app/gigaword_chn.all.a2b.uni.ite50.vec
 .idea
-*.pyc
-maas-model-example.tar
-app/glove*
+.vscode
+*.pyc*

@@ -3,7 +3,7 @@
 # type: 模型的类型，取值范围: Entity | Relation
 # version: 模型的版本，与Docker镜像tag保持一致
 
-name: "一个实体抽取样例"
+name: "实体抽取 - BiLSTM + CRF"
 type: "Entity"
 version: "1.0.0"
 
